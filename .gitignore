@@ -1,0 +1,6 @@
+build/
+*.o
+*.out
+*.csv
+*.log
+*.png
