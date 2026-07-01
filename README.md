@@ -19,6 +19,14 @@ Inspired by serving systems such as vLLM, TensorRT-LLM, and TGI:
 - Adaptive SLA controller (closed-loop QoS weight adjustment)
 - Capacity planning experiments (throughput/latency vs token budget)
 
+## Design highlights (tl;dr)
+- Paged KV-cache allocator with logical→physical indirection + fragmentation metrics
+- Prefill/decode isolation + weighted token scheduler (global token budget per step)
+- Pressure-driven LRU eviction (interactive protected)
+- Closed-loop SLA controller that adapts scheduling weights
+
+Details in `DESIGN.md`.
+
 ## Motivation
 Production LLM serving requires balancing:
 - KV-cache growth and memory fragmentation
