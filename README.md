@@ -4,6 +4,9 @@ A systems-level simulator of modern LLM serving runtimes, modeling **KV-cache me
 
 This is a production-inspired runtime modeling sandbox (not a toy allocator).
 
+## Docs
+- Design notes: `DESIGN.md`
+
 ## What it models
 Inspired by serving systems such as vLLM, TensorRT-LLM, and TGI:
 
